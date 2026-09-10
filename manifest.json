@@ -1,0 +1,18 @@
+{
+  "name": "Bipes Boys Asheville",
+  "short_name": "Bipes AVL",
+  "description": "Mountain Reunion Guide & Clubhouse for Tom, Dan, and Ben in South Slope, Asheville NC",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0f17",
+  "theme_color": "#0b0f17",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

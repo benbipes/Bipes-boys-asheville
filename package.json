@@ -1,0 +1,13 @@
+{
+  "name": "bipes-boys-asheville",
+  "version": "1.0.0",
+  "description": "Mobile-friendly mountain reunion guide & clubhouse for Tom, Dan, and Ben in Asheville, NC",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["asheville", "south-slope", "travel", "pwa", "darts", "bourbon"],
+  "author": "Ben Bipes",
+  "license": "MIT"
+}

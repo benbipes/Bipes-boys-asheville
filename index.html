@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Bipes Boys Asheville • South Slope Mountain Guide</title>
+  
+  <meta name="description" content="Mountain reunion guide & clubhouse for Tom, Dan, and Ben in Asheville, NC">
+  <meta name="theme-color" content="#0b0f17">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bipes AVL">
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- APP HEADER -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <span class="brand-icon">🏔️</span>
+      <div>
+        <div class="brand-title">Bipes Boys Asheville</div>
+        <div class="brand-sub">South Slope • 3 Nights</div>
+      </div>
+    </div>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="desktop-nav-links">
+      <button class="desktop-nav-btn active" data-tab-target="hq">Townhouse HQ</button>
+      <button class="desktop-nav-btn" data-tab-target="itinerary">Itinerary</button>
+      <button class="desktop-nav-btn" data-tab-target="explore">Explore Guide</button>
+      <button class="desktop-nav-btn" data-tab-target="lounge">Games & Lounge</button>
+    </nav>
+
+    <!-- Header Controls -->
+    <div class="header-controls">
+      <button class="icon-btn" onclick="App.copyText('98 Southside Avenue, Asheville, NC 28801', 'HQ Address')" title="Copy Address">
+        📍
+      </button>
+      <button class="icon-btn" id="menu-toggle-btn" aria-label="Open Menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- HAMBURGER SLIDE-OUT DRAWER -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="nav-drawer" id="nav-drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">Bipes Mountain Hub</div>
+      <button class="icon-btn" id="drawer-close-btn" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="drawer-nav-list">
+      <a href="#hq" class="drawer-link" data-tab-target="hq">
+        <span>🏠</span> Townhouse HQ & Codes
+      </a>
+      <a href="#itinerary" class="drawer-link" data-tab-target="itinerary">
+        <span>📅</span> 3-Day Itinerary
+      </a>
+      <a href="#explore" class="drawer-link" data-tab-target="explore">
+        <span>🍺</span> Breweries & Restaurants
+      </a>
+      <a href="#explore" class="drawer-link" onclick="App.switchTab('explore'); App.setExploreCategory('pool');">
+        <span>🎱</span> Pool Halls & Darts
+      </a>
+      <a href="#explore" class="drawer-link" onclick="App.switchTab('explore'); App.setExploreCategory('cigars');">
+        <span>💨</span> Cigars & Nightcaps
+      </a>
+      <a href="#explore" class="drawer-link" onclick="App.switchTab('explore'); App.setExploreCategory('provisions');">
+        <span>🥩</span> Butcher & Cook-In
+      </a>
+      <a href="#lounge" class="drawer-link" data-tab-target="lounge">
+        <span>🎯</span> Dart Games & Scoreboards
+      </a>
+      <a href="https://johannsfolly-production.up.railway.app" target="_blank" rel="noopener noreferrer" class="drawer-link">
+        <span>🚀</span> Play Johann's Folly
+      </a>
+      <a href="#lounge" class="drawer-link" onclick="App.switchTab('lounge');">
+        <span>🥃</span> Bourbon Flight Journal
+      </a>
+    </div>
+
+    <div class="drawer-info-box">
+      <p><strong>Townhouse Address:</strong><br>98 Southside Avenue, Asheville, NC 28801</p>
+      <p style="margin-top: 8px;"><strong>Door Code:</strong> 4791#</p>
+      <p><strong>Garage Code:</strong> 0115 ENTER</p>
+      <p><strong>Wi-Fi:</strong> 98Southside</p>
+      <p style="margin-top: 10px; font-size: 0.8rem; color: var(--amber-primary);">
+        Quiet hours begin at 10:00 PM. Check-out Sunday 11:00 AM.
+      </p>
+    </div>
+  </aside>
+
+  <!-- MAIN APP CONTENT -->
+  <main class="container">
+
+    <!-- ============================================== -->
+    <!-- TAB 1: TOWNHOUSE HQ & ACCESS CODES            -->
+    <!-- ============================================== -->
+    <section id="view-hq" class="tab-view active">
+      
+      <!-- HERO CARD -->
+      <div class="hq-hero-card">
+        <div class="hq-location-badge">📍 South Slope Brewing District</div>
+        <h1 class="hq-hero-title">98 Southside Avenue HQ</h1>
+        <div class="hq-hero-address">98 Southside Avenue, Asheville, NC 28801</div>
+        <div class="hq-actions-row">
+          <a href="https://maps.apple.com/?q=98+Southside+Avenue+Asheville+NC+28801" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            🍏 Apple Maps
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=98+Southside+Avenue+Asheville+NC+28801" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            🧭 Google Maps
+          </a>
+          <button class="btn btn-primary btn-sm" onclick="App.copyText('98 Southside Avenue, Asheville, NC 28801', 'Address')">
+            📋 Copy Address
+          </button>
+        </div>
+      </div>
+
+      <!-- ACCESS CODES SECTION -->
+      <div class="section-header">
+        <h2 class="section-title">🔑 Access & Key Codes</h2>
+        <p class="section-subtitle">Tap copy for quick entry upon arrival.</p>
+      </div>
+
+      <div class="codes-grid">
+        <!-- Door Keypad Code -->
+        <div class="code-box">
+          <div class="code-box-header">
+            <span class="code-label">Unit Key Code (Door beside Garage)</span>
+          </div>
+          <div class="code-val-row">
+            <span class="code-value">4791#</span>
+            <button class="btn-copy" onclick="App.copyText('4791#', 'Door Code')">Copy</button>
+          </div>
+          <div class="code-sub-note">Keypad located on door beside the garage</div>
+        </div>
+
+        <!-- Garage Code -->
+        <div class="code-box">
+          <div class="code-box-header">
+            <span class="code-label">Garage Key Code</span>
+          </div>
+          <div class="code-val-row">
+            <span class="code-value">0115 ENTER</span>
+            <button class="btn-copy" onclick="App.copyText('0115 ENTER', 'Garage Code')">Copy</button>
+          </div>
+          <div class="code-sub-note">Press 0115 followed by ENTER</div>
+        </div>
+      </div>
+
+      <!-- WI-FI & QR CODE -->
+      <div class="wifi-card">
+        <div class="card-title-row">
+          <div class="card-title">📶 Townhouse Wi-Fi</div>
+          <span class="badge-role">Fast Mountain Fiber</span>
+        </div>
+
+        <div class="wifi-content-split">
+          <div class="wifi-details-col">
+            <div class="wifi-row">
+              <div class="wifi-row-label">Network (SSID)</div>
+              <div class="wifi-input-like">
+                <span class="wifi-val">98Southside</span>
+                <button class="btn-copy" onclick="App.copyText('98Southside', 'Wi-Fi Network')">Copy</button>
+              </div>
+            </div>
+
+            <div class="wifi-row">
+              <div class="wifi-row-label">Password</div>
+              <div class="wifi-input-like">
+                <span class="wifi-val">beercity828</span>
+                <button class="btn-copy" onclick="App.copyText('beercity828', 'Wi-Fi Password')">Copy</button>
+              </div>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px;">
+              Scan the QR code with an iPhone or Android camera to connect immediately without typing!
+            </p>
+          </div>
+
+          <!-- Dynamic SVG QR Code -->
+          <div class="wifi-qr-col">
+            <div id="wifi-qr-box"></div>
+            <span class="qr-caption">Scan to Join Wi-Fi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARKING INSTRUCTIONS -->
+      <div class="card">
+        <div class="card-title-row">
+          <div class="card-title">🚗 Parking Instructions (2 Dedicated Spaces)</div>
+          <span class="badge-role">2 Vehicles</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary);">
+          There are two dedicated parking spaces for Unit 98:
+        </p>
+
+        <ul class="parking-steps">
+          <li class="parking-step-item">
+            <span class="step-num-badge">1</span>
+            <div class="step-content">
+              <strong>Garage Space:</strong> You have one designated parking spot directly inside the private garage.
+            </div>
+          </li>
+          <li class="parking-step-item">
+            <span class="step-num-badge">2</span>
+            <div class="step-content">
+              <strong>Outdoor Designated Spot (#98):</strong> At the property entrance, <strong>turn left behind the townhomes</strong>. The <strong>third parallel spot</strong> is your designated space marked <strong>98</strong>.
+            </div>
+          </li>
+          <li class="parking-step-item">
+            <span class="step-num-badge">ℹ</span>
+            <div class="step-content">
+              <strong>Orientation:</strong> Townhome 98 is positioned directly to the right of the entrance. The access code (<code>4791#</code>) is for the door beside the garage.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- QUIET HOURS NOTICE -->
+      <div class="card" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <div style="font-size: 0.95rem; font-weight: 700;">🌙 South Slope Neighborhood Quiet Hours</div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary);">Begin promptly at 10:00 PM every evening.</div>
+        </div>
+        <div id="quiet-hours-status" class="quiet-badge quiet-inactive">
+          Quiet Hours begin at 10:00 PM
+        </div>
+      </div>
+
+      <!-- INTERACTIVE CHECKOUT CHECKLIST -->
+      <div class="checkout-card">
+        <div class="card-title-row">
+          <div class="card-title">📋 Departure & Check-Out Checklist</div>
+          <button class="btn btn-secondary btn-sm" onclick="App.resetCheckoutList()">Reset</button>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">
+          Check out is <strong>Sunday @ 11:00 AM</strong>. Tap each rule as we finish:
+        </p>
+
+        <div class="progress-bar-wrap">
+          <div class="progress-header-row">
+            <span>Check-Out Readiness</span>
+            <span id="checkout-progress-label">0 of 6 completed (0%)</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="checkout-progress-fill"></div>
+          </div>
+        </div>
+
+        <div class="checklist-items-wrap" id="checkout-rules-list">
+          <!-- Dynamically populated from data.js -->
+        </div>
+      </div>
+
+      <!-- CREW & GEAR ROSTER -->
+      <div class="card">
+        <div class="card-title-row">
+          <div class="card-title">👥 The Mountain Crew</div>
+          <span class="badge-role">Oct 2026</span>
+        </div>
+        <div class="crew-grid" id="crew-roster-list">
+          <!-- Populated from data.js -->
+        </div>
+
+        <div style="margin-top: 14px; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--amber-primary); text-transform: uppercase; margin-bottom: 8px;">
+            🎒 Boys' Gear Stash
+          </div>
+          <div class="gear-grid" id="gear-roster-list">
+            <!-- Populated from data.js -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 2: ITINERARY (THURSDAY - SUNDAY)           -->
+    <!-- ============================================== -->
+    <section id="view-itinerary" class="tab-view">
+      
+      <div class="section-header">
+        <h2 class="section-title">📅 3-Day Mountain Itinerary</h2>
+        <p class="section-subtitle">Tailored for South Slope beer, steaks, pool, darts, and cigars.</p>
+      </div>
+
+      <!-- Days Navigation Tabs -->
+      <div class="days-nav-pills" id="itinerary-days-nav">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Timeline Container -->
+      <div id="itinerary-timeline">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 3: EXPLORE ASHEVILLE GUIDE                -->
+    <!-- ============================================== -->
+    <section id="view-explore" class="tab-view">
+      
+      <div class="section-header">
+        <h2 class="section-title">🧭 Asheville & South Slope Guide</h2>
+        <p class="section-subtitle">Curated craft spots, pool & darts, steaks, cigars, and provisions.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="explore-filter-bar">
+        <button class="filter-chip active" data-cat="all" onclick="App.setExploreCategory('all')">All Spots</button>
+        <button class="filter-chip" data-cat="brewery" onclick="App.setExploreCategory('brewery')">🍺 Breweries</button>
+        <button class="filter-chip" data-cat="food" onclick="App.setExploreCategory('food')">🥩 Dining & BBQ</button>
+        <button class="filter-chip" data-cat="pool" onclick="App.setExploreCategory('pool')">🎱 Pool & Darts</button>
+        <button class="filter-chip" data-cat="cigars" onclick="App.setExploreCategory('cigars')">💨 Cigars & Drinks</button>
+        <button class="filter-chip" data-cat="provisions" onclick="App.setExploreCategory('provisions')">🛒 Provisions/Butcher</button>
+      </div>
+
+      <!-- Search & Walkable Toggle -->
+      <div class="search-and-toggle-row">
+        <div class="search-input-wrap">
+          <input type="text" class="search-input" id="explore-search" placeholder="Search by name, vibe, or dish..." oninput="App.handleSearchInput(event)">
+        </div>
+        <button class="btn-toggle-walk" id="toggle-walkable-btn" onclick="App.toggleWalkableFilter()">
+          🚶 Walkable Only
+        </button>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="explore-grid" id="explore-cards-grid">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 4: BOYS' LOUNGE & GAMES                    -->
+    <!-- ============================================== -->
+    <section id="view-lounge" class="tab-view">
+      
+      <div class="section-header">
+        <h2 class="section-title">🎯 Boys' Lounge & Clubhouse</h2>
+        <p class="section-subtitle">Townhouse dart scoreboards, Johann's Folly, bourbon flight & Ben's Spotify playlist.</p>
+      </div>
+
+      <!-- 1. DART SCOREBOARD CARD -->
+      <div class="card card-accent">
+        <div class="card-title-row">
+          <div class="card-title">🎯 Digital Dart Scoreboard</div>
+          <span class="badge-role">Townhouse Board</span>
+        </div>
+        
+        <!-- Scoreboard mode tabs -->
+        <div class="lounge-subnav">
+          <button class="lounge-tab-btn active" id="subtab-cricket" onclick="document.getElementById('cricket-board-wrap').style.display='block'; document.getElementById('x01-board-wrap').style.display='none'; this.classList.add('active'); document.getElementById('subtab-x01').classList.remove('active');">
+            Cricket (15-20, Bull)
+          </button>
+          <button class="lounge-tab-btn" id="subtab-x01" onclick="document.getElementById('cricket-board-wrap').style.display='none'; document.getElementById('x01-board-wrap').style.display='block'; this.classList.add('active'); document.getElementById('subtab-cricket').classList.remove('active');">
+            501 / 301 Countdown
+          </button>
+        </div>
+
+        <!-- Cricket Wrap -->
+        <div id="cricket-board-wrap">
+          <div id="cricket-board-container">
+            <!-- Rendered by js/games.js -->
+          </div>
+        </div>
+
+        <!-- 501 / 301 Wrap -->
+        <div id="x01-board-wrap" style="display: none;">
+          <div id="x01-board-container">
+            <!-- Rendered by js/games.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. JOHANN'S FOLLY DART GAME -->
+      <div class="card">
+        <div class="card-title-row">
+          <div class="card-title">🎯 Johann's Folly</div>
+          <span class="badge-role">Ben's Custom Game</span>
+        </div>
+        <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 14px;">
+          Another custom dart game designed and built by Ben! Launch the live digital game on Railway to play along on the townhouse dart board during the weekend.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+          <a href="https://johannsfolly-production.up.railway.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            🚀 Play Johann's Folly ➔
+          </a>
+          <button class="btn btn-secondary btn-sm" onclick="App.copyText('https://johannsfolly-production.up.railway.app', 'Johann\'s Folly Link')">
+            📋 Copy Game Link
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. BOURBON FLIGHT JOURNAL -->
+      <div class="card">
+        <div class="card-title-row">
+          <div class="card-title">🥃 Bourbon Tasting Flight</div>
+          <div style="display: flex; gap: 6px;">
+            <button class="btn btn-secondary btn-sm" onclick="BourbonModule.resetToDefaults()" title="Reset to Ben's purchased bottles">Ben's Bottles</button>
+            <button class="btn btn-primary btn-sm" onclick="BourbonModule.showAddModal()">+ Add Bottle</button>
+          </div>
+        </div>
+        <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 12px;">
+          Ben secured two fantastic bottles to share this weekend: <strong>Buffalo Trace</strong> (90°) and <strong>Old Forester 1920 Prohibition Style</strong> (115°). Rate and review them below!
+        </p>
+
+        <div class="bourbon-list" id="bourbon-cards-container">
+          <!-- Rendered by js/bourbon.js -->
+        </div>
+      </div>
+
+      <!-- 4. SONOS MOUNTAIN MUSIC -->
+      <div class="card">
+        <div class="card-title-row">
+          <div class="card-title">🔊 Sonos Mountain Music</div>
+          <span class="badge-role">Ben's Spotify</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 12px;">
+          Curated mountain reunion playlist for the Sonos speakers on the patio and living room.
+        </p>
+
+        <div id="sonos-playlists-container">
+          <!-- Rendered by js/app.js -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- BOTTOM MOBILE NAVIGATION BAR -->
+  <nav class="bottom-nav-bar" aria-label="Mobile Navigation">
+    <button class="bottom-tab-btn active" data-tab-target="hq">
+      <span class="tab-icon">🏠</span>
+      <span class="tab-label">HQ & Codes</span>
+    </button>
+    <button class="bottom-tab-btn" data-tab-target="itinerary">
+      <span class="tab-icon">📅</span>
+      <span class="tab-label">Itinerary</span>
+    </button>
+    <button class="bottom-tab-btn" data-tab-target="explore">
+      <span class="tab-icon">🍺</span>
+      <span class="tab-label">Explore</span>
+    </button>
+    <button class="bottom-tab-btn" data-tab-target="lounge">
+      <span class="tab-icon">🎯</span>
+      <span class="tab-label">Lounge</span>
+    </button>
+  </nav>
+
+  <!-- TOAST NOTIFICATION POPUP -->
+  <div id="toast-notification" class="toast-msg">Copied to clipboard!</div>
+
+  <!-- ADD BOURBON MODAL -->
+  <div class="modal-overlay" id="add-bourbon-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">🥃 Log New Bourbon Bottle</div>
+        <button class="btn-close-modal" onclick="BourbonModule.hideAddModal()">✕</button>
+      </div>
+
+      <form onsubmit="BourbonModule.handleAddSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="b-name-input">Bottle Name *</label>
+          <input type="text" id="b-name-input" class="form-input" placeholder="e.g. Eagle Rare 10yr" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="b-distiller-input">Distillery / Brand</label>
+          <input type="text" id="b-distiller-input" class="form-input" placeholder="e.g. Buffalo Trace">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group">
+            <label class="form-label" for="b-proof-input">Proof / ABV</label>
+            <input type="text" id="b-proof-input" class="form-input" placeholder="e.g. 90 Proof">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="b-owner-select">Brought By</label>
+            <select id="b-owner-select" class="form-input">
+              <option value="Ben">Ben (Kingsport)</option>
+              <option value="Tom">Tom (Dad)</option>
+              <option value="Dan">Dan (Raleigh)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="b-rating-input">Rating (1.0 to 10.0)</label>
+          <input type="number" id="b-rating-input" class="form-input" min="1" max="10" step="0.1" value="8.5">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="b-notes-input">Tasting Notes / Cigar Pairing</label>
+          <textarea id="b-notes-input" class="form-input" rows="3" placeholder="Nose, palate, finish notes..."></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 16px;">
+          <button type="button" class="btn btn-secondary" onclick="BourbonModule.hideAddModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save to Flight</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/qrcode.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/games.js"></script>
+  <script src="js/bourbon.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

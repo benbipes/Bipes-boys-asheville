@@ -17,9 +17,27 @@
 - **Parking:** 2 Dedicated Spots (1 inside garage, 1 dedicated outdoor spot marked #98: turn left behind townhomes, third parallel spot)
 - **Quiet Hours:** 10:00 PM nightly
 
+## 🌐 Permanent 24/7 Hosting: GitHub Pages
+
+To keep the site active 24/7 without needing your laptop powered on:
+
+1. Create a new repository on GitHub (e.g. `bipes-boys-asheville`).
+2. Push this directory:
+   ```bash
+   cd /Users/ben/.gemini/antigravity/scratch/BipesBoysAsheville
+   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/bipes-boys-asheville.git
+   git push -u origin main
+   ```
+3. On GitHub, go to **Settings** ➔ **Pages**:
+   - Source: **Deploy from a branch**
+   - Branch: `main` / `/ (root)`
+   - Click **Save**.
+4. GitHub Pages will publish the site live at:
+   `https://<YOUR_GITHUB_USERNAME>.github.io/bipes-boys-asheville/`
+
 ---
 
-## 🚀 How to Run & Share with Dad & Dan
+## 🚀 How to Run Locally & Share with Dad & Dan
 
 This web app requires **zero build steps** and runs on any device.
 

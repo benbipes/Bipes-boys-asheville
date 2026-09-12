@@ -98,7 +98,7 @@ Network: http://192.168.1.xxx:3000
 - **Digital Dart Scoreboard:**
   - **Cricket Mode:** Real-time scoring on 15, 16, 17, 18, 19, 20 & Bullseye. Single (+1), Double (x2), and Triple (x3) tap controls, automatic closed-mark tracking (`/`, `✕`, `⨂`), points calculation, undo button, and turn management for Tom, Dan, and Ben.
   - **501 / 301 Countdown Mode:** Total score tracking, bust detection, quick score chips (26, 41, 60, 81, 100, 140, 180 🎯), and checkout detection.
-- **Johann's Folly (Ben's Dart Game):** Direct link to launch Ben's custom web dart game hosted on Railway: [https://johannsfolly-production.up.railway.app](https://johannsfolly-production.up.railway.app).
+- **Johann's Folly (Ben's Dart Game):** Direct link to launch Ben's custom web dart game: [https://benbipes.github.io/johannsfolly/](https://benbipes.github.io/johannsfolly/).
 - **Bourbon Tasting Flight Journal:** Rate and review the bourbon bottles brought on the trip — pre-loaded with Ben's purchased bottles: **Buffalo Trace Kentucky Straight** (90°) and **Old Forester 1920 Prohibition Style** (115°) with ratings 1.0 to 10.0, nose/palate notes, and quick edit/add.
 - **Sonos Mountain Music:** Integrated player and direct link to Ben's official Asheville trip Spotify playlist: [https://open.spotify.com/playlist/5bmnGiwp6n9l1j5UUCIgBz](https://open.spotify.com/playlist/5bmnGiwp6n9l1j5UUCIgBz?si=2bafa98738694ae7).
 

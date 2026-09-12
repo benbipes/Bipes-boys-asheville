@@ -611,7 +611,7 @@ const TRIP_DATA = {
       tags: ["Short Drive", "Liquor Store", "Bourbon & Rye"]
     }
   ],
-  johannsFollyUrl: "https://johannsfolly-production.up.railway.app",
+  johannsFollyUrl: "https://benbipes.github.io/johannsfolly/",
   spotifyPlaylist: {
     name: "Bipes Boys Asheville",
     url: "https://open.spotify.com/playlist/5bmnGiwp6n9l1j5UUCIgBz?si=2bafa98738694ae7",
